@@ -34,6 +34,8 @@ GEM
     better_errors (0.3.2)
       coderay (>= 1.0.0)
       erubis (>= 2.7.0)
+    bourne (1.1.2)
+      mocha (= 0.10.5)
     builder (3.0.4)
     capybara (2.0.2)
       mime-types (>= 1.16)
@@ -97,7 +99,10 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.1)
     mime-types (1.19)
+    mocha (0.10.5)
+      metaclass (~> 0.0.1)
     mongoid (3.0.19)
       activemodel (~> 3.1)
       moped (~> 1.2)
@@ -166,6 +171,13 @@ GEM
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
+    shoulda-matchers (1.4.2)
+      activesupport (>= 3.0.0)
+      bourne (~> 1.1.2)
+    simplecov (0.7.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.7.1)
+    simplecov-html (0.7.1)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -197,6 +209,7 @@ DEPENDENCIES
   database_cleaner (>= 0.9.1)
   devise (>= 2.2.3)
   email_spec (>= 1.4.0)
+  factory_girl
   factory_girl_rails (>= 4.2.0)
   figaro (>= 0.5.3)
   jquery-rails
@@ -208,4 +221,6 @@ DEPENDENCIES
   rails (= 3.2.11)
   rspec-rails (>= 2.12.2)
   sass-rails (~> 3.2.3)
+  shoulda-matchers
+  simplecov
   uglifier (>= 1.0.3)

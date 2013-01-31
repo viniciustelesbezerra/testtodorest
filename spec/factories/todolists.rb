@@ -3,7 +3,8 @@
 FactoryGirl.define do
   factory :todolist do
     description "MyString"
-    user nil
     priority 1
+    association :user, factory: :user_not_unique
   end
+  
 end
