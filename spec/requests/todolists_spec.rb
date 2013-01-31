@@ -9,13 +9,34 @@ describe "Todolists" do
     fill_in "Password", :with => user.password
 
     click_button "Sign in"
+
   end
 
   describe "GET /todolists" do
-    it "works! (now write some real specs)" do
+    it "redirect_to" do
       get todolists_path
       response.status.should be(302)
     end
+
   end
 
+  describe "GET index" do
+    it "Open url and Validate text" do
+      get todolists_path
+      sleep(5)
+      page.should have_content("Listing todolists")
+    end
+
+  end  
+
+  describe "GET new" do
+    it "Open Modal and Validate input" do 
+      get todolists_path
+      click_link("New Todolist")
+      sleep(5)
+      page.should have_content("New todolist")
+    end
+  
+  end
+    
 end

@@ -1,4 +1,9 @@
-RECIPES
-["controllers", "core", "email", "extras", "frontend", "gems", "git", "init", "models", "prelaunch", "railsapps", "readme", "routes", "saas", "setup", "testing", "views"]
-PREFERENCES
-{:orm=>"mongoid", :railsapps=>"rails3-mongoid-devise", :authentication=>"devise", :unit_test=>"rspec", :database=>"mongodb", :devise_modules=>"default", :git=>true, :email=>"gmail", :integration=>"cucumber", :quiet_assets=>true, :authorization=>"none", :fixtures=>"factory_girl", :templates=>"erb", :local_env_file=>true, :starter_app=>"users_app", :dev_webserver=>"webrick", :frontend=>"none", :better_errors=>true, :form_builder=>"none"}
+Done
+I wish could have more time to do more grate things like:
+All requests tests, invalid model tests etc...
+
+You can see the tests coverage opening the file /coverage/index.html in your browser
+
+If i can do anything more let me know
+
+And thanks for the challenge! 
