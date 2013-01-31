@@ -1,4 +1,7 @@
 Rails3MongoidDevise::Application.routes.draw do
+  resources :todolists
+
+
   devise_for :users
 
   # The priority is based upon order of creation:
