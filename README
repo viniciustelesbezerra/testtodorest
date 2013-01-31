@@ -4,6 +4,13 @@ All requests tests, invalid model tests etc...
 
 You can see the tests coverage opening the file /coverage/index.html in your browser
 
+Finished in 19.97 seconds
+55 examples, 0 failures, 1 pending
+
+Randomized with seed 52893
+
+Coverage report generated for RSpec to /home/vinicius/projects/testtodorest/coverage. 107 / 107 LOC (100.0%) covered.
+
 If i can do anything more let me know
 
 And thanks for the challenge! 
