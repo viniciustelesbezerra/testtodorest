@@ -1,0 +1,82 @@
+
+
+Started GET "/todolists/" for 127.0.0.1 at 2013-01-31 10:01:46 -0200
+Processing by TodolistsController#index as HTML
+Completed 401 Unauthorized in 6ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-01-31 10:01:46 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (28.1ms)
+Compiled scaffolds.css  (18ms)  (pid 15445)
+Compiled todolists.css  (0ms)  (pid 15445)
+Compiled application.css  (46ms)  (pid 15445)
+Compiled jquery.js  (1ms)  (pid 15445)
+Compiled jquery_ujs.js  (0ms)  (pid 15445)
+Compiled todolists.js  (101ms)  (pid 15445)
+Compiled application.js  (165ms)  (pid 15445)
+Completed 200 OK in 301ms (Views: 300.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-01-31 10:01:54 -0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xb1C8dS1vOcUQt/MVg4cfQCoBTIjDAyeh/Mn+OHoYow=", "user"=>{"email"=>"x@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7546ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_development collection=users selector={"$query"=>{"email"=>"x@gmail.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (1.1442ms)
+Completed 401 Unauthorized in 101ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xb1C8dS1vOcUQt/MVg4cfQCoBTIjDAyeh/Mn+OHoYow=", "user"=>{"email"=>"x@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 93ms (Views: 7.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-01-31 10:01:59 -0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xb1C8dS1vOcUQt/MVg4cfQCoBTIjDAyeh/Mn+OHoYow=", "user"=>{"email"=>"x@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5753ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_development collection=users selector={"$query"=>{"email"=>"x@gmail.com"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3357ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=rails3_mongoid_devise_development collection=users selector={"_id"=>"5109d1947fa81fef8f000001"} update={"$set"=>{"remember_created_at"=>2013-01-31 12:02:00 UTC}} flags=[] (0.1667ms)
+  MOPED: 127.0.0.1:27017 UPDATE       database=rails3_mongoid_devise_development collection=users selector={"_id"=>"5109d1947fa81fef8f000001"} update={"$set"=>{"last_sign_in_at"=>2013-01-31 05:08:24 UTC, "current_sign_in_at"=>2013-01-31 12:02:00 UTC, "sign_in_count"=>4}} flags=[] (0.4737ms)
+Redirected to http://localhost:3000/todolists
+Completed 302 Found in 163ms
+
+
+Started GET "/todolists" for 127.0.0.1 at 2013-01-31 10:02:00 -0200
+Processing by TodolistsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_development collection=users selector={"$query"=>{"_id"=>"5109d1947fa81fef8f000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.6068ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_development collection=todolists selector={"$query"=>{"user_id"=>"5109d1947fa81fef8f000001"}, "$orderby"=>{"priority"=>1}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.7975ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_development collection=users selector={"$query"=>{"_id"=>"5109d1947fa81fef8f000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.8130ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_development collection=users selector={"$query"=>{"_id"=>"5109d1947fa81fef8f000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.3088ms)
+  Rendered todolists/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 20ms (Views: 18.0ms)
+
+
+Started GET "/todolists/new" for 127.0.0.1 at 2013-01-31 10:02:04 -0200
+Processing by TodolistsController#new as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1435ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_development collection=users selector={"$query"=>{"_id"=>"5109d1947fa81fef8f000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.7651ms)
+  Rendered todolists/_form.html.erb (2.6ms)
+  Rendered todolists/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 13ms (Views: 7.6ms)
+
+
+Started POST "/todolists" for 127.0.0.1 at 2013-01-31 10:04:34 -0200
+Processing by TodolistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xb1C8dS1vOcUQt/MVg4cfQCoBTIjDAyeh/Mn+OHoYow=", "todolist"=>{"description"=>"", "user_id"=>"5109d1947fa81fef8f000001", "priority"=>""}, "commit"=>"Create Todolist"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4117ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_development collection=users selector={"$query"=>{"_id"=>"5109d1947fa81fef8f000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.4528ms)
+  Rendered todolists/_form.html.erb (3.8ms)
+  Rendered todolists/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 36ms (Views: 8.5ms)
+
+
+Started POST "/todolists" for 127.0.0.1 at 2013-01-31 10:04:47 -0200
+Processing by TodolistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xb1C8dS1vOcUQt/MVg4cfQCoBTIjDAyeh/Mn+OHoYow=", "todolist"=>{"description"=>"", "user_id"=>"5109d1947fa81fef8f000001", "priority"=>""}, "commit"=>"Create Todolist"}
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2300ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_development collection=users selector={"$query"=>{"_id"=>"5109d1947fa81fef8f000001"}, "$orderby"=>{:_id=>1}} flags=[:slave_ok] limit=-1 skip=0 batch_size=nil fields=nil (0.5295ms)
+  Rendered todolists/_form.html.erb (4.2ms)
+  Rendered todolists/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 37ms (Views: 31.3ms)

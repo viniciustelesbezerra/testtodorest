@@ -40,7 +40,6 @@ gem 'jquery-rails'
 gem "mongoid", ">= 3.0.19"
 gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
 gem "database_cleaner", ">= 0.9.1", :group => :test
-gem "mongoid-rspec", ">= 1.6.0", :group => :test
 gem "email_spec", ">= 1.4.0", :group => :test
 gem "cucumber-rails", ">= 1.3.0", :group => :test, :require => false
 gem "launchy", ">= 2.1.2", :group => :test
@@ -58,4 +57,5 @@ group :test do
 	gem 'simplecov', :require => false
   #Shoulda 
   gem 'shoulda-matchers'
+  gem "mongoid-rspec"
 end

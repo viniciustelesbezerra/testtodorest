@@ -3,4 +3,5 @@ class Todolist
   field :description, type: String
   field :priority, type: Integer
   belongs_to :user
+  validates :description, :priority, :presence => true
 end

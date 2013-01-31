@@ -1,147 +1,155 @@
 require 'spec_helper'
 
 describe TodolistsController do
-  login_user
-  let!(:todolist) { FactoryGirl.create(:todolist) }
-
-  def valid_attributes
-    { "description" => "MyString" }
-  end
-
-  def valid_session
-    {}
-  end
-
-  describe "GET index" do
-    it "assigns all todolists as @todolists" do
-      get :index
-      assigns(:todolists).should include(todolist)
-    end
-
-    it "renders the index view" do
-      get :index
-      response.should render_template :index
+  
+  describe "Not Signed In" do
+    login_user_not_allowed
+    let!(:todolist) { FactoryGirl.create(:todolist_without_user) }
+    
+    it "Not Allowed" do
+        get :edit, id: todolist.to_param
+        response.code.should eq("302")
     end
 
   end
 
-  describe "GET show" do
-    it "assigns the requested todolist as @todolist" do
-      todolist = Todolist.create! valid_attributes
-      get :show, {:id => todolist.to_param}, valid_session
-      assigns(:todolist).should eq(todolist)
-    end
-  end
+  describe "Signed In" do
+    login_user
+    let!(:todolist) { Todolist.first }
 
-  describe "GET new" do
-    it "assigns a new todolist as @todolist" do
-      get :new, {}, valid_session
-      assigns(:todolist).should be_a_new(Todolist)
-    end
-  end
-
-  describe "GET edit" do
-    it "assigns the requested todolist as @todolist" do
-      todolist = Todolist.create! valid_attributes
-      get :edit, {:id => todolist.to_param}, valid_session
-      assigns(:todolist).should eq(todolist)
-    end
-  end
-
-  describe "POST create" do
-    describe "with valid params" do
-      it "creates a new Todolist" do
-        expect {
-          post :create, {:todolist => valid_attributes}, valid_session
-        }.to change(Todolist, :count).by(1)
+    describe "GET index" do
+      it "assigns all todolists as @todolists" do
+        get :index
+        Todolist.all.should include(todolist)
       end
 
-      it "assigns a newly created todolist as @todolist" do
-        post :create, {:todolist => valid_attributes}, valid_session
-        assigns(:todolist).should be_a(Todolist)
-        assigns(:todolist).should be_persisted
+      it "renders the index view" do
+        get :index
+        response.should render_template :index
       end
 
-      it "redirects to the created todolist" do
-        post :create, {:todolist => valid_attributes}, valid_session
-        response.should redirect_to(Todolist.last)
-      end
     end
 
-    describe "with invalid params" do
-      it "assigns a newly created but unsaved todolist as @todolist" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        Todolist.any_instance.stub(:save).and_return(false)
-        post :create, {:todolist => { "description" => "invalid value" }}, valid_session
+    describe "GET show" do
+      it "assigns the requested todolist as @todolist" do
+        get :show, id: todolist.to_param
+        assigns(:todolist).should eq(todolist)
+      end
+
+      it "renders the show view" do
+        get :show, id: todolist.to_param
+        response.should render_template :show
+      end
+
+    end
+
+    describe "GET new" do
+      it "assigns a new todolist as @todolist" do
+        get :new
         assigns(:todolist).should be_a_new(Todolist)
       end
 
-      it "re-renders the 'new' template" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        Todolist.any_instance.stub(:save).and_return(false)
-        post :create, {:todolist => { "description" => "invalid value" }}, valid_session
-        response.should render_template("new")
+      it "renders the new view" do
+        get :new
+        response.should render_template :new
       end
+
     end
-  end
 
-  describe "PUT update" do
-    describe "with valid params" do
-      it "updates the requested todolist" do
-        todolist = Todolist.create! valid_attributes
-        # Assuming there are no other todolists in the database, this
-        # specifies that the Todolist created on the previous line
-        # receives the :update_attributes message with whatever params are
-        # submitted in the request.
-        Todolist.any_instance.should_receive(:update_attributes).with({ "description" => "MyString" })
-        put :update, {:id => todolist.to_param, :todolist => { "description" => "MyString" }}, valid_session
-      end
-
+    describe "GET edit" do
       it "assigns the requested todolist as @todolist" do
-        todolist = Todolist.create! valid_attributes
-        put :update, {:id => todolist.to_param, :todolist => valid_attributes}, valid_session
+        get :edit, id: todolist.to_param
         assigns(:todolist).should eq(todolist)
       end
 
-      it "redirects to the todolist" do
-        todolist = Todolist.create! valid_attributes
-        put :update, {:id => todolist.to_param, :todolist => valid_attributes}, valid_session
-        response.should redirect_to(todolist)
+      it "renders the edit view" do
+        get :edit, id: todolist.to_param
+        response.should render_template :edit
+      end
+
+    end
+
+    describe "POST create" do
+      describe "with valid params" do
+        it "creates a new Todolist" do
+          expect {
+            post :create, todolist: FactoryGirl.attributes_for(:todolist)
+          }.to change(Todolist, :count).by(1)
+        end
+
+        it "assigns a newly created todolist as @todolist" do
+          post :create, todolist: FactoryGirl.attributes_for(:todolist)
+          assigns(:todolist).should be_a(Todolist)
+          assigns(:todolist).should be_persisted
+        end
+
+        it "redirects to the created todolist" do
+          post :create, todolist: FactoryGirl.attributes_for(:todolist)
+          response.should redirect_to(Todolist.last)
+        end
+      end
+
+      describe "with invalid params" do
+        it "assigns a newly created but unsaved todolist as @todolist" do
+          Todolist.any_instance.stub(:save).and_return(false)
+          post :create, todolist: FactoryGirl.attributes_for(:todolist_invalid)
+          assigns(:todolist).should be_a_new(Todolist)
+        end
+
+        it "redirect_to with errors" do
+          Todolist.any_instance.stub(:save).and_return(false)
+          post :create, todolist: FactoryGirl.attributes_for(:todolist_invalid)
+          response.code.should eq("302")
+        end
       end
     end
 
-    describe "with invalid params" do
-      it "assigns the todolist as @todolist" do
-        todolist = Todolist.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        Todolist.any_instance.stub(:save).and_return(false)
-        put :update, {:id => todolist.to_param, :todolist => { "description" => "invalid value" }}, valid_session
-        assigns(:todolist).should eq(todolist)
+    describe "PUT update" do
+      describe "with valid params" do
+        it "updates the requested todolist" do
+          Todolist.any_instance.should_receive(:update_attributes)
+          put :update, {:id => todolist.to_param, todolist: FactoryGirl.attributes_for(:todolist)}
+        end
+
+        it "assigns the requested todolist as @todolist" do
+          put :update, {:id => todolist.to_param, todolist: FactoryGirl.attributes_for(:todolist)}
+          assigns(:todolist).should eq(todolist)
+        end
+
+        it "redirects to the todolist" do
+          put :update, {:id => todolist.to_param, todolist: FactoryGirl.attributes_for(:todolist)}
+          response.should redirect_to(todolist)
+        end
       end
 
-      it "re-renders the 'edit' template" do
-        todolist = Todolist.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        Todolist.any_instance.stub(:save).and_return(false)
-        put :update, {:id => todolist.to_param, :todolist => { "description" => "invalid value" }}, valid_session
-        response.should render_template("edit")
+      describe "with invalid params" do
+        it "assigns the todolist as @todolist" do
+          Todolist.any_instance.stub(:save).and_return(false)
+          put :update, {:id => todolist.to_param, todolist: FactoryGirl.attributes_for(:todolist_invalid)}
+          assigns(:todolist).should eq(todolist)
+        end
+
+        it "redirect_to with errors" do
+          Todolist.any_instance.stub(:save).and_return(false)
+          put :update, {:id => todolist.to_param, todolist: FactoryGirl.attributes_for(:todolist_invalid)}
+          response.code.should eq("302")
+        end
       end
     end
+
+    describe "DELETE destroy" do
+      it "destroys the requested todolist" do
+        expect {
+          delete :destroy, id: todolist.to_param
+        }.to change(Todolist, :count).by(-1)
+      end
+
+      it "redirects to the todolists list" do
+        delete :destroy, id: todolist.to_param
+        response.should redirect_to(todolists_url)
+      end
+    end
+
   end
-
-  describe "DELETE destroy" do
-    it "destroys the requested todolist" do
-      todolist = Todolist.create! valid_attributes
-      expect {
-        delete :destroy, {:id => todolist.to_param}, valid_session
-      }.to change(Todolist, :count).by(-1)
-    end
-
-    it "redirects to the todolists list" do
-      todolist = Todolist.create! valid_attributes
-      delete :destroy, {:id => todolist.to_param}, valid_session
-      response.should redirect_to(todolists_url)
-    end
-  end
-
+    
 end
