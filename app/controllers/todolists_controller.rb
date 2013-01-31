@@ -1,8 +1,10 @@
 class TodolistsController < ApplicationController
+  before_filter :owns_todolist, only: [:edit, :update, :destroy] 
+
   # GET /todolists
   # GET /todolists.json
   def index
-    @todolists = Todolist.where(user_id: current_user.id)#current_user.id
+    @todolists = Todolist.asc(:priority).where(user_id: current_user.id)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -80,4 +82,15 @@ class TodolistsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+
+  def owns_todolist
+    begin  
+      redirect_to root_path if !user_signed_in? || current_user != Todolist.where(user_id: current_user.id).first.user
+    rescue
+      redirect_to root_path
+    end
+  end
+
 end
