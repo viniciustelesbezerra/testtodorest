@@ -1,95 +1,52 @@
 class TodolistsController < ApplicationController
+  respond_to :html, :json
   before_filter :owns_todolist, only: [:edit, :update, :destroy] 
 
-  # GET /todolists
-  # GET /todolists.json
   def index
     @todolists = Todolist.asc(:priority).where(user_id: current_user.id)
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @todolists }
-    end
   end
 
-  # GET /todolists/1
-  # GET /todolists/1.json
   def show
-    @todolist = Todolist.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @todolist }
-    end
+    @todolist = get_todolist(params[:id])
   end
 
-  # GET /todolists/new
-  # GET /todolists/new.json
   def new
     @todolist = Todolist.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @todolist }
-    end
   end
 
-  # GET /todolists/1/edit
   def edit
-    @todolist = Todolist.find(params[:id])
+    @todolist = get_todolist(params[:id])
   end
 
-  # POST /todolists
-  # POST /todolists.json
   def create
     @todolist = Todolist.new(params[:todolist])
-
-    respond_to do |format|
-      if @todolist.save
-        format.html { redirect_to @todolist, notice: 'Todolist was successfully created.' }
-        format.json { render json: @todolist, status: :created, location: @todolist }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @todolist.errors, status: :unprocessable_entity }
-      end
-    end
+    flash[:notice] = 'Todolist was successfully created.' if @todolist.save
+    respond_with(@todolist)
   end
 
-  # PUT /todolists/1
-  # PUT /todolists/1.json
   def update
-    @todolist = Todolist.find(params[:id])
-
-    respond_to do |format|
-      if @todolist.update_attributes(params[:todolist])
-        format.html { redirect_to @todolist, notice: 'Todolist was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @todolist.errors, status: :unprocessable_entity }
-      end
-    end
+    @todolist = get_todolist(params[:id])
+    flash[:notice] = 'Todolist was successfully updated.' if @todolist.update_attributes(params[:todolist])
+    respond_with(@todolist)
   end
 
-  # DELETE /todolists/1
-  # DELETE /todolists/1.json
   def destroy
-    @todolist = Todolist.find(params[:id])
-    @todolist.destroy
-
-    respond_to do |format|
-      format.html { redirect_to todolists_url }
-      format.json { head :no_content }
-    end
+    @todolist = get_todolist(params[:id])
+    flash[:notice] = 'Todolist was successfully deleted.' if @todolist.destroy
+    respond_with(@todolist)
   end
 
   private
+  
+  def get_todolist(todolist_id)
+    Todolist.find(todolist_id)
+  end
 
   def owns_todolist
     begin  
-      redirect_to root_path if !user_signed_in? || current_user != Todolist.where(user_id: current_user.id).first.user
+      redirect_to root_path, error: "Not allowed" if !user_signed_in? || current_user != Todolist.where(user_id: current_user.id).first.user
     rescue
-      redirect_to root_path
+      redirect_to root_path, error: "Not allowed"
     end
   end
 

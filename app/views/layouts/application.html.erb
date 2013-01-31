@@ -14,6 +14,11 @@
   <%= link_to('Login', new_user_session_path)  %>  
 <% end %>
 
+<br/>
+
+<p id="notice"><%= notice %></p>
+<p id="error" style="color:red;"><%= flash[:error] %></p>
+
 <%= yield %>
 
 </body>
