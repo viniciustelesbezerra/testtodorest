@@ -46,11 +46,11 @@ class TodolistsController < ApplicationController
   end
 
   def owns_todolist
-    #begin  
-      redirect_to root_path, error: "Not allowed" if !user_signed_in? || current_user != get_todolist(params[:id]).user
-    #rescue
-    #  redirect_to root_path, error: "Not allowed"
-    #end
+    begin  
+      redirect_to root_path, alert: "Not allowed" if !user_signed_in? || current_user != get_todolist(params[:id]).user
+    rescue
+      redirect_to root_path, alert: "Not allowed"
+    end
   end
 
 end

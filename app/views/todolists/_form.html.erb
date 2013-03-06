@@ -3,17 +3,17 @@
   <%= form_for([current_user, @todolist]) do |t| %>
   <%= hidden_field_tag 'user[_id]', current_user.id %>
 
-  <% #if @todolist.errors.any? %>
+  <% if @todolist.errors.any? %>
     <div id="error_explanation">
-      <h2><%#= pluralize(@todolist.errors.count, "error") %> prohibited this todolist from being saved:</h2>
+      <h2><%= pluralize(@todolist.errors.count, "error") %> prohibited this todolist from being saved:</h2>
 
       <ul>
-      <% #@todolist.errors.full_messages.each do |msg| %>
-        <li><%#= msg %></li>
-      <% #end %>
+      <% @todolist.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
       </ul>
     </div>
-  <% #end %>
+  <% end %>
 
   <div class="field">
     <%= t.label :description %><br />
