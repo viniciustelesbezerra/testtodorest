@@ -1,7 +1,5 @@
 <%#= form_for(current_user) do |f| %>
 
-  <%= @todolist.pretty_inspect %>
-
   <%= form_for([current_user, @todolist]) do |t| %>
   <%= hidden_field_tag 'user[_id]', current_user.id %>
 
