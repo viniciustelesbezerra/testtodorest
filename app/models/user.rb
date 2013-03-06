@@ -24,7 +24,8 @@ class User
   field :current_sign_in_ip, :type => String
   field :last_sign_in_ip,    :type => String
   
-  has_many :todolists
+  ####has_many :todolists
+  embeds_many :todolists
   
   ## Confirmable
   # field :confirmation_token,   :type => String

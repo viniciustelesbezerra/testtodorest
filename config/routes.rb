@@ -1,6 +1,11 @@
 Rails3MongoidDevise::Application.routes.draw do
-  resources :todolists
+  #users/513782b860265a1944000001/todolists
 
+  #resources :todolists
+
+  resources :users do
+    resources :todolists
+  end
 
   devise_for :users
 
@@ -53,7 +58,7 @@ Rails3MongoidDevise::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'todolists#index'
+  root :to => 'users#todolists'
 
   # See how all your routes lay out with "rake routes"
 

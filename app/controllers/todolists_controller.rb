@@ -11,7 +11,8 @@ class TodolistsController < ApplicationController
   end
 
   def new
-    @todolist = Todolist.new
+    #@todolist = Todolist.new
+    @todolist = current_user.todolists.new
   end
 
   def edit
