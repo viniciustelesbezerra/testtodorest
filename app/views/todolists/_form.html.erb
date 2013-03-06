@@ -1,8 +1,10 @@
 <%#= form_for(current_user) do |f| %>
 
-  <%#= form_for(@todolist) do |f| %>
+  <%= @todolist.pretty_inspect %>
 
-  <%= form_for([current_user, @todolist]) do |f| %>
+  <%= form_for([current_user, @todolist]) do |t| %>
+  <%= hidden_field_tag 'user[_id]', current_user.id %>
+
   <% #if @todolist.errors.any? %>
     <div id="error_explanation">
       <h2><%#= pluralize(@todolist.errors.count, "error") %> prohibited this todolist from being saved:</h2>
@@ -16,16 +18,15 @@
   <% #end %>
 
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <%= t.label :description %><br />
+    <%= t.text_field :description %>
   </div>
-  <%#= f.hidden_field :user_id, value: current_user.id %>
   <div class="field">
-    <%= f.label :priority %><br />
-    <%= f.number_field :priority %>
+    <%= t.label :priority %><br />
+    <%= t.number_field :priority %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= t.submit %>
   </div>
   <% end %>
 

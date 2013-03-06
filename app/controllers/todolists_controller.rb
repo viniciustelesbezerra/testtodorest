@@ -3,7 +3,7 @@ class TodolistsController < ApplicationController
   before_filter :owns_todolist, only: [:edit, :update, :destroy] 
 
   def index
-    @todolists = Todolist.asc(:priority).where(user_id: current_user.id)
+    @todolists = current_user.todolists
   end
 
   def show
@@ -20,7 +20,8 @@ class TodolistsController < ApplicationController
   end
 
   def create
-    @todolist = Todolist.new(params[:todolist])
+    @todolist = current_user.todolists.new(params[:todolist])
+    ####@todolist = Todolist.new(params[:todolist])
     flash[:notice] = 'Todolist was successfully created.' if @todolist.save
     respond_with(@todolist)
   end

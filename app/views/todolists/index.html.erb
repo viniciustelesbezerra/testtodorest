@@ -15,9 +15,9 @@
     <td><%= todolist.description %></td>
     <td><%= todolist.user.email %></td>
     <td><%= todolist.priority %></td>
-    <td><%= link_to 'Show', todolist %></td>
-    <td><%= link_to 'Edit', edit_todolist_path(todolist) %></td>
-    <td><%= link_to 'Destroy', todolist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%#= link_to 'Show', todolist %></td>
+    <td><%#= link_to 'Edit', edit_todolist_path(todolist) %></td>
+    <td><%#= link_to 'Destroy', todolist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
