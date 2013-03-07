@@ -8,30 +8,34 @@ describe User do
 		it { user.should be_valid }
 	end
 
-	describe "Realations" do
-		it { should have_many(:todolists) }
+	describe "Relations" do
+		it { should embed_many(:todolists) }
+	end
+
+	describe "EnsureIndex" do
+		it { should have_index_for(name: 1) } 
+	end
+
+	describe "Attributes validations" do
+		it { should_not allow_value("email").for(:email) }
+  		it { should allow_value("user@gmail.com").for(:email) }
 	end
 
     describe "Assigments" do
-	    
 	    describe "Allowed" do
-	      [:email].each do |attr| 
+	      [:email, :name].each do |attr| 
 	        it { should allow_mass_assignment_of(attr) }
 	      end
 	    end
 
 	    describe "Not allowed" do
-	      [:id, :_id, :_type].each do |attr| 
-	        it { should_not allow_mass_assignment_of(attr) }
-	      end
+	        it { should_not allow_mass_assignment_of(:_id) }
 	    end
 
     end
 
     describe "Acceptance samples" do
     	it { user.email.should eq("user@gmail.com") }
-		it { user.todolists.should eq([]) }
-
     end
 
 end

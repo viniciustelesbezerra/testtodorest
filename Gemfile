@@ -49,6 +49,7 @@ gem "devise", ">= 2.2.3"
 gem "quiet_assets", ">= 1.0.1", :group => :development
 gem "figaro", ">= 0.5.3"
 gem "better_errors", ">= 0.3.2", :group => :development
+gem 'meta_request', :group => :development
 
 group :test do
 	# Replaces fixtures
@@ -57,5 +58,7 @@ group :test do
 	gem 'simplecov', :require => false
   #Shoulda 
   gem 'shoulda-matchers'
-  gem "mongoid-rspec"
+  gem 'mongoid-rspec'
+
+  gem 'jasmine'
 end
