@@ -3,7 +3,7 @@ class TodolistsController < ApplicationController
   before_filter :owns_todolist, only: [:edit, :update, :destroy] 
 
   def index
-    @todolists = Todolist.asc(:priority).where(user_id: current_user.id)
+    @todolists = current_user.todolists
   end
 
   def show
@@ -11,7 +11,8 @@ class TodolistsController < ApplicationController
   end
 
   def new
-    @todolist = Todolist.new
+    #@todolist = Todolist.new
+    @todolist = current_user.todolists.new
   end
 
   def edit
@@ -19,34 +20,36 @@ class TodolistsController < ApplicationController
   end
 
   def create
-    @todolist = Todolist.new(params[:todolist])
+    @todolist = current_user.todolists.new(params[:todolist])
+    ####@todolist = Todolist.new(params[:todolist])
     flash[:notice] = 'Todolist was successfully created.' if @todolist.save
-    respond_with(@todolist)
+    respond_with(current_user, @todolist)
   end
 
   def update
     @todolist = get_todolist(params[:id])
     flash[:notice] = 'Todolist was successfully updated.' if @todolist.update_attributes(params[:todolist])
-    respond_with(@todolist)
+    respond_with(current_user, @todolist)
   end
 
   def destroy
     @todolist = get_todolist(params[:id])
     flash[:notice] = 'Todolist was successfully deleted.' if @todolist.destroy
-    respond_with(@todolist)
+    respond_with(current_user, @todolist)
   end
 
   private
   
   def get_todolist(todolist_id)
-    Todolist.find(todolist_id)
+    current_user.todolists.find(todolist_id)
+    #Todolist.find(todolist_id)
   end
 
   def owns_todolist
     begin  
-      redirect_to root_path, error: "Not allowed" if !user_signed_in? || current_user != Todolist.where(user_id: current_user.id).first.user
+      redirect_to root_path, alert: "Not allowed" if !user_signed_in? || current_user != get_todolist(params[:id]).user
     rescue
-      redirect_to root_path, error: "Not allowed"
+      redirect_to root_path, alert: "Not allowed"
     end
   end
 

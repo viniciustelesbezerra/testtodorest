@@ -23,14 +23,13 @@ class User
   field :last_sign_in_at,    type: Time
   field :current_sign_in_ip, type: String
   field :last_sign_in_ip,    type: String
-  
+
   field :name,    type: String
   
   index({ name: 1 }, { unique: true })
   
+  ####has_many :todolists
   embeds_many :todolists
-
-  #has_many :todolists
   
   ## Confirmable
   # field :confirmation_token,   :type => String

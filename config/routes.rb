@@ -1,8 +1,10 @@
 Rails3MongoidDevise::Application.routes.draw do
-  resources :todolists
-
+  #users/513782b860265a1944000001/todolists
 
   devise_for :users
+  resources :users do
+    resources :todolists
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
