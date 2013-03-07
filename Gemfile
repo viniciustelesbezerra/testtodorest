@@ -49,12 +49,8 @@ gem "devise", ">= 2.2.3"
 gem "quiet_assets", ">= 1.0.1", :group => :development
 gem "figaro", ">= 0.5.3"
 gem "better_errors", ">= 0.3.2", :group => :development
-<<<<<<< HEAD
-gem 'meta_request', :group => :development
-=======
 gem "binding_of_caller", :group => :development
 gem "meta_request", "0.2.1", :group => :development
->>>>>>> 1a0d7d9cff68af6490c485bd77b8059a824b2012
 
 group :test do
 	# Replaces fixtures
@@ -64,6 +60,6 @@ group :test do
   #Shoulda 
   gem 'shoulda-matchers'
   gem 'mongoid-rspec'
-
+  #JS Spec
   gem 'jasmine'
 end

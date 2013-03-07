@@ -237,11 +237,7 @@ DEPENDENCIES
   jquery-rails
   json
   launchy (>= 2.1.2)
-<<<<<<< HEAD
-  meta_request
-=======
   meta_request (= 0.2.1)
->>>>>>> 1a0d7d9cff68af6490c485bd77b8059a824b2012
   mongoid (>= 3.0.19)
   mongoid-rspec
   quiet_assets (>= 1.0.1)

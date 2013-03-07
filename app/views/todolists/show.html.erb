@@ -13,9 +13,5 @@
   <%= @todolist.priority %>
 </p>
 
-
-<%#= link_to 'Edit', edit_todolist_path(@todolist) %> |
-<%#= link_to 'Back', todolists_path %>
-
 <%= link_to 'Edit', edit_user_todolist_path(current_user, @todolist) %> |
 <%= link_to 'Back', user_todolists_path %>

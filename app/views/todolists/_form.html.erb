@@ -1,7 +1,4 @@
-<%#= form_for(current_user) do |f| %>
-
-  <%= form_for([current_user, @todolist]) do |t| %>
-  <%= hidden_field_tag 'user[_id]', current_user.id %>
+<%= form_for([current_user, @todolist]) do |t| %>
 
   <% if @todolist.errors.any? %>
     <div id="error_explanation">
@@ -26,6 +23,5 @@
   <div class="actions">
     <%= t.submit %>
   </div>
-  <% end %>
+<% end %>
 
-<% #end %>
