@@ -18,7 +18,7 @@ describe User do
 
 	describe "Attributes validations" do
 		it { should_not allow_value("email").for(:email) }
-  		it { should allow_value("user@gmail.com").for(:email) }
+  		it { should allow_value("usernew@gmail.com").for(:email) }
 	end
 
     describe "Assigments" do

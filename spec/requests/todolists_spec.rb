@@ -13,7 +13,7 @@ describe "Todolists" do
   end
 
   describe "GET /todolists" do
-    it "redirect_to" do
+    xit "redirect_to" do
       get todolists_path
       response.status.should be(302)
     end
@@ -21,7 +21,7 @@ describe "Todolists" do
   end
 
   describe "GET index" do
-    it "Open url and Validate text" do
+    xit "Open url and Validate text" do
       get todolists_path
       sleep(5)
       page.should have_content("Listing todolists")
@@ -30,7 +30,7 @@ describe "Todolists" do
   end  
 
   describe "GET new" do
-    it "Open Modal and Validate input" do 
+    xit "Open Modal and Validate input" do 
       get todolists_path
       click_link("New Todolist")
       sleep(5)

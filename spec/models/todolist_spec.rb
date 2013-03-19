@@ -9,7 +9,7 @@ describe Todolist do
 	end
 
 	describe "Realations" do
-		it { should belong_to(:user) }
+		it { should be_embedded_in(:user) }
 	end
 
 	describe "Attributes Validations" do
@@ -36,7 +36,7 @@ describe Todolist do
     describe "Acceptance samples" do
     	it { todolist.description.should eq("MyString") }
     	it { todolist.priority.should eq(1) }
-		it { todolist.user.should eq(User.where(id: todolist.user_id).first) }
+		it { todolist.user.should eq(User.where(id: todolist.user.id).first) }
 
     end
 

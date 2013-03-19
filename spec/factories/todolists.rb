@@ -9,13 +9,11 @@ FactoryGirl.define do
   	end
 
   	factory :todolist_invalid, traits: [:invalid]
-    association :user, factory: :user_not_unique
-  
   end
   
   factory :todolist_without_user, class: Todolist do
     description "MyString"
-    priority 1
+    priority 2
   end
 
 end
