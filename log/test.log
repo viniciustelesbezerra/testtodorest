@@ -16408,3 +16408,694 @@ Completed 302 Found in 5ms
   MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4909ms)
   MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=todolists selector={} flags=[] (0.0751ms)
   MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=users selector={} flags=[] (0.0517ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (24.8206ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708e99c5df77f3c000001", "name"=>"MyString", "price"=>1}] flags=[] (0.1929ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rails3_mongoid_devise_test command={:count=>"products", :query=>{}} (68.3758ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (1.0269ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.2103ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000002", "name"=>"MyString", "price"=>1}] flags=[] (0.4041ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (50.4782ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.1907ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000003", "name"=>"MyString", "price"=>1}] flags=[] (0.3147ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.7722ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.1705ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000004", "name"=>"MyString", "price"=>1}] flags=[] (0.3407ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"557708ea9c5df77f3c000004", "product"=>{"name"=>"MyString", "price"=>"1"}}
+Redirected to http://test.host/products
+Completed 302 Found in 82ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6857ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0787ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000005", "name"=>"MyString", "price"=>1}] flags=[] (0.1519ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"557708ea9c5df77f3c000005", "product"=>{"name"=>"MyString", "price"=>"1"}}
+Redirected to http://test.host/products
+Completed 302 Found in 2ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6745ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0868ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000006", "name"=>"MyString", "price"=>1}] flags=[] (0.1488ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"557708ea9c5df77f3c000006"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"557708ea9c5df77f3c000006"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4859ms)
+Redirected to http://test.host/products/557708ea9c5df77f3c000006
+Completed 302 Found in 4ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6421ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0863ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000007", "name"=>"MyString", "price"=>1}] flags=[] (0.1376ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"557708ea9c5df77f3c000007"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"557708ea9c5df77f3c000007"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (3.3345ms)
+Redirected to http://test.host/products/557708ea9c5df77f3c000007
+Completed 302 Found in 10ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.8633ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.2198ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000008", "name"=>"MyString", "price"=>1}] flags=[] (0.1979ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"557708ea9c5df77f3c000008"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"557708ea9c5df77f3c000008"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4041ms)
+Redirected to http://test.host/products/557708ea9c5df77f3c000008
+Completed 302 Found in 4ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3579ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0741ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000009", "name"=>"MyString", "price"=>1}] flags=[] (0.2131ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"557708ea9c5df77f3c000009"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"557708ea9c5df77f3c000009"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4365ms)
+Redirected to http://test.host/products/557708ea9c5df77f3c000009
+Completed 302 Found in 4ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4895ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0875ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c00000a", "name"=>"MyString", "price"=>1}] flags=[] (0.1628ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"557708ea9c5df77f3c00000a"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"557708ea9c5df77f3c00000a"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4060ms)
+Redirected to http://test.host/products/557708ea9c5df77f3c00000a
+Completed 302 Found in 4ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4699ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0858ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c00000b", "name"=>"MyString", "price"=>1}] flags=[] (0.1543ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4039ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0784ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c00000c", "name"=>"MyString", "price"=>1}] flags=[] (0.1507ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3893ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0777ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c00000d", "name"=>"MyString", "price"=>1}] flags=[] (0.1452ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rails3_mongoid_devise_test command={:count=>"products", :query=>{}} (0.2961ms)
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"557708ea9c5df77f3c00000d"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"557708ea9c5df77f3c00000d"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4418ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={"_id"=>"557708ea9c5df77f3c00000d"} flags=[:remove_first] (0.1385ms)
+Redirected to http://test.host/products
+Completed 302 Found in 6ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=rails3_mongoid_devise_test command={:count=>"products", :query=>{}} (0.3860ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3970ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0803ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c00000e", "name"=>"MyString", "price"=>1}] flags=[] (0.1507ms)
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"557708ea9c5df77f3c00000e"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"557708ea9c5df77f3c00000e"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3283ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={"_id"=>"557708ea9c5df77f3c00000e"} flags=[:remove_first] (0.0982ms)
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4578ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0780ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c00000f", "name"=>"MyString", "price"=>1}] flags=[] (0.1593ms)
+Processing by ProductsController#new as HTML
+Completed 200 OK in 6ms (Views: 5.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5014ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0794ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000010", "name"=>"MyString", "price"=>1}] flags=[] (0.2027ms)
+Processing by ProductsController#new as HTML
+Completed 200 OK in 1ms (Views: 1.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4816ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0837ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000011", "name"=>"MyString", "price"=>1}] flags=[] (0.1402ms)
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"557708ea9c5df77f3c000011"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"557708ea9c5df77f3c000011"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3347ms)
+Completed 200 OK in 3ms (Views: 1.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4492ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0734ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000012", "name"=>"MyString", "price"=>1}] flags=[] (0.1357ms)
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"557708ea9c5df77f3c000012"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"557708ea9c5df77f3c000012"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3414ms)
+Completed 200 OK in 2ms (Views: 1.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4263ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0727ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000013", "name"=>"MyString", "price"=>1}] flags=[] (0.1373ms)
+Processing by ProductsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4489ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0715ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000014", "name"=>"MyString", "price"=>1}] flags=[] (0.1311ms)
+Processing by ProductsController#index as HTML
+Completed 200 OK in 1ms (Views: 1.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4883ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0744ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000015", "name"=>"MyString", "price"=>1}] flags=[] (0.1287ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4277ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0851ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000016", "name"=>"MyString", "price"=>1}] flags=[] (0.1314ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4914ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0701ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000017", "name"=>"MyString", "price"=>1}] flags=[] (0.1323ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4611ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0691ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000018", "name"=>"MyString", "price"=>1}] flags=[] (0.1237ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4263ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0687ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c000019", "name"=>"MyString", "price"=>1}] flags=[] (0.1237ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4120ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0658ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c00001a", "name"=>"MyString", "price"=>1}] flags=[] (0.1194ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4041ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0622ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c00001b", "name"=>"MyString", "price"=>1}] flags=[] (0.1166ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5519ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0703ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c00001c", "name"=>"MyString", "price"=>1}] flags=[] (0.1204ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (1.4362ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0708ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c00001d", "name"=>"MyString", "price"=>1}] flags=[] (0.1259ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4230ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0653ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c00001e", "name"=>"MyString", "price"=>1}] flags=[] (0.1152ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4039ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0641ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"557708ea9c5df77f3c00001f", "name"=>"MyString", "price"=>1}] flags=[] (0.1187ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4060ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0641ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5198ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0677ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4687ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0651ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4659ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0663ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5536ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.1185ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3948ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0701ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5112ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0653ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4561ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0634ms)
+Started GET "/products" for 127.0.0.1 at 2015-06-09 12:40:26 -0300
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3605ms)
+Completed 200 OK in 4ms (Views: 3.6ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (1.2379ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.2658ms)
+Started GET "/products" for 127.0.0.1 at 2015-06-09 12:41:42 -0300
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4551ms)
+Completed 200 OK in 6ms (Views: 5.2ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (1.0381ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.2332ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6349ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000001", "name"=>"MyString", "price"=>1}] flags=[] (0.1287ms)
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"55770a489c5df73d9b000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a489c5df73d9b000001"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3860ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a489c5df73d9b000001"} flags=[:remove_first] (0.1047ms)
+Redirected to http://test.host/products
+Completed 302 Found in 66ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6523ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0842ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000002", "name"=>"MyString", "price"=>1}] flags=[] (0.1407ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rails3_mongoid_devise_test command={:count=>"products", :query=>{}} (10.8953ms)
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"55770a489c5df73d9b000002"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a489c5df73d9b000002"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4740ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a489c5df73d9b000002"} flags=[:remove_first] (0.0827ms)
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=rails3_mongoid_devise_test command={:count=>"products", :query=>{}} (0.4454ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5977ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0722ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000003", "name"=>"MyString", "price"=>1}] flags=[] (0.1345ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"55770a489c5df73d9b000003", "product"=>{"name"=>"MyString", "price"=>"1"}}
+Redirected to http://test.host/products
+Completed 302 Found in 4ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3943ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.1240ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000004", "name"=>"MyString", "price"=>1}] flags=[] (0.1507ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"55770a489c5df73d9b000004", "product"=>{"name"=>"MyString", "price"=>"1"}}
+Redirected to http://test.host/products
+Completed 302 Found in 2ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4339ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0856ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000005", "name"=>"MyString", "price"=>1}] flags=[] (0.1473ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rails3_mongoid_devise_test command={:count=>"products", :query=>{}} (0.2842ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"55770a489c5df73d9b000005", "product"=>{"name"=>"MyString", "price"=>"1"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000006", "name"=>"MyString", "price"=>1}] flags=[] (0.1299ms)
+Redirected to http://test.host/products/55770a489c5df73d9b000006
+Completed 302 Found in 2ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=rails3_mongoid_devise_test command={:count=>"products", :query=>{}} (0.3173ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3805ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0732ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000007", "name"=>"MyString", "price"=>1}] flags=[] (0.1347ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"55770a489c5df73d9b000007", "product"=>{"name"=>"MyString", "price"=>"1"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000008", "name"=>"MyString", "price"=>1}] flags=[] (0.1614ms)
+Redirected to http://test.host/products/55770a489c5df73d9b000008
+Completed 302 Found in 2ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6182ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0777ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000009", "name"=>"MyString", "price"=>1}] flags=[] (0.1385ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"55770a489c5df73d9b000009", "product"=>{"name"=>"MyString", "price"=>"1"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b00000a", "name"=>"MyString", "price"=>1}] flags=[] (0.1059ms)
+Redirected to http://test.host/products/55770a489c5df73d9b00000a
+Completed 302 Found in 2ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5295ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0753ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b00000b", "name"=>"MyString", "price"=>1}] flags=[] (0.1354ms)
+Processing by ProductsController#index as HTML
+Completed 200 OK in 5ms (Views: 4.8ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6039ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0844ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b00000c", "name"=>"MyString", "price"=>1}] flags=[] (0.1345ms)
+Processing by ProductsController#index as HTML
+Completed 200 OK in 1ms (Views: 0.9ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5853ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0739ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b00000d", "name"=>"MyString", "price"=>1}] flags=[] (0.1609ms)
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"55770a489c5df73d9b00000d"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a489c5df73d9b00000d"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4807ms)
+Completed 200 OK in 3ms (Views: 1.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5627ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0689ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b00000e", "name"=>"MyString", "price"=>1}] flags=[] (0.1338ms)
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"55770a489c5df73d9b00000e"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a489c5df73d9b00000e"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3862ms)
+Completed 200 OK in 2ms (Views: 1.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5414ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0687ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b00000f", "name"=>"MyString", "price"=>1}] flags=[] (0.1316ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"55770a489c5df73d9b00000f"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a489c5df73d9b00000f"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4575ms)
+Redirected to http://test.host/products/55770a489c5df73d9b00000f
+Completed 302 Found in 4ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5860ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0851ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000010", "name"=>"MyString", "price"=>1}] flags=[] (0.1450ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"55770a489c5df73d9b000010"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a489c5df73d9b000010"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.7668ms)
+Redirected to http://test.host/products/55770a489c5df73d9b000010
+Completed 302 Found in 4ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6192ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0732ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000011", "name"=>"MyString", "price"=>1}] flags=[] (0.1371ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"55770a489c5df73d9b000011"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a489c5df73d9b000011"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4375ms)
+Redirected to http://test.host/products/55770a489c5df73d9b000011
+Completed 302 Found in 3ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5860ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0741ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000012", "name"=>"MyString", "price"=>1}] flags=[] (0.1361ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"55770a489c5df73d9b000012"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a489c5df73d9b000012"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4447ms)
+Redirected to http://test.host/products/55770a489c5df73d9b000012
+Completed 302 Found in 3ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6726ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0839ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000013", "name"=>"MyString", "price"=>1}] flags=[] (0.1392ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"55770a489c5df73d9b000013"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a489c5df73d9b000013"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5994ms)
+Redirected to http://test.host/products/55770a489c5df73d9b000013
+Completed 302 Found in 3ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5894ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0839ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000014", "name"=>"MyString", "price"=>1}] flags=[] (0.1359ms)
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"55770a489c5df73d9b000014"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a489c5df73d9b000014"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4854ms)
+Completed 200 OK in 3ms (Views: 1.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4041ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0730ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000015", "name"=>"MyString", "price"=>1}] flags=[] (0.1504ms)
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"55770a489c5df73d9b000015"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a489c5df73d9b000015"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3343ms)
+Completed 200 OK in 2ms (Views: 1.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3567ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0789ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000016", "name"=>"MyString", "price"=>1}] flags=[] (0.1271ms)
+Processing by ProductsController#new as HTML
+Completed 200 OK in 2ms (Views: 1.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5231ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0918ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a489c5df73d9b000017", "name"=>"MyString", "price"=>1}] flags=[] (0.1762ms)
+Processing by ProductsController#new as HTML
+Completed 200 OK in 1ms (Views: 1.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5600ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0758ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6623ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000001", "name"=>"MyString", "price"=>1}] flags=[] (0.1287ms)
+Processing by ProductsController#new as HTML
+  Rendered products/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 39ms (Views: 38.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.7236ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0808ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000002", "name"=>"MyString", "price"=>1}] flags=[] (0.1442ms)
+Processing by ProductsController#new as HTML
+Completed 200 OK in 1ms (Views: 1.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6909ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0801ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000003", "name"=>"MyString", "price"=>1}] flags=[] (0.1423ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"55770a6e9c5df73513000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a6e9c5df73513000003"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4826ms)
+Redirected to http://test.host/products/55770a6e9c5df73513000003
+Completed 302 Found in 34ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6611ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0823ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000004", "name"=>"MyString", "price"=>1}] flags=[] (0.1464ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"55770a6e9c5df73513000004"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a6e9c5df73513000004"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (3.3467ms)
+Redirected to http://test.host/products/55770a6e9c5df73513000004
+Completed 302 Found in 9ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.7708ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.1633ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000005", "name"=>"MyString", "price"=>1}] flags=[] (0.2024ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"55770a6e9c5df73513000005"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a6e9c5df73513000005"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5784ms)
+Redirected to http://test.host/products/55770a6e9c5df73513000005
+Completed 302 Found in 4ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6788ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.1049ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000006", "name"=>"MyString", "price"=>1}] flags=[] (0.1915ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"55770a6e9c5df73513000006"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a6e9c5df73513000006"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5670ms)
+Redirected to http://test.host/products/55770a6e9c5df73513000006
+Completed 302 Found in 4ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.7250ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.1144ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000007", "name"=>"MyString", "price"=>1}] flags=[] (0.2441ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"55770a6e9c5df73513000007"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a6e9c5df73513000007"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5376ms)
+Redirected to http://test.host/products/55770a6e9c5df73513000007
+Completed 302 Found in 4ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6833ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0975ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000008", "name"=>"MyString", "price"=>1}] flags=[] (0.1695ms)
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"55770a6e9c5df73513000008"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a6e9c5df73513000008"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5109ms)
+Completed 200 OK in 4ms (Views: 1.7ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6177ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0882ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000009", "name"=>"MyString", "price"=>1}] flags=[] (0.1585ms)
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"55770a6e9c5df73513000009"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a6e9c5df73513000009"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (4.1018ms)
+Completed 200 OK in 7ms (Views: 2.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.7396ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0975ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df7351300000a", "name"=>"MyString", "price"=>1}] flags=[] (0.1590ms)
+Processing by ProductsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6502ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0877ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df7351300000b", "name"=>"MyString", "price"=>1}] flags=[] (0.1483ms)
+Processing by ProductsController#index as HTML
+Completed 200 OK in 1ms (Views: 1.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6580ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0911ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df7351300000c", "name"=>"MyString", "price"=>1}] flags=[] (0.1395ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rails3_mongoid_devise_test command={:count=>"products", :query=>{}} (0.4964ms)
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"55770a6e9c5df7351300000c"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a6e9c5df7351300000c"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5710ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a6e9c5df7351300000c"} flags=[:remove_first] (0.1340ms)
+Redirected to http://test.host/products
+Completed 302 Found in 5ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=rails3_mongoid_devise_test command={:count=>"products", :query=>{}} (0.5064ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6185ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0799ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df7351300000d", "name"=>"MyString", "price"=>1}] flags=[] (0.1376ms)
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"55770a6e9c5df7351300000d"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a6e9c5df7351300000d"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4451ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a6e9c5df7351300000d"} flags=[:remove_first] (0.0896ms)
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5891ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0730ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df7351300000e", "name"=>"MyString", "price"=>1}] flags=[] (0.1378ms)
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"55770a6e9c5df7351300000e"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a6e9c5df7351300000e"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4599ms)
+Completed 200 OK in 3ms (Views: 1.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6280ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0768ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df7351300000f", "name"=>"MyString", "price"=>1}] flags=[] (0.1562ms)
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"55770a6e9c5df7351300000f"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a6e9c5df7351300000f"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.8645ms)
+Completed 200 OK in 3ms (Views: 1.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4506ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0880ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000010", "name"=>"MyString", "price"=>1}] flags=[] (0.1523ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rails3_mongoid_devise_test command={:count=>"products", :query=>{}} (0.2892ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"55770a6e9c5df73513000010", "product"=>{"name"=>"MyString", "price"=>"1"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000011", "name"=>"MyString", "price"=>1}] flags=[] (0.1450ms)
+Redirected to http://test.host/products/55770a6e9c5df73513000011
+Completed 302 Found in 4ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=rails3_mongoid_devise_test command={:count=>"products", :query=>{}} (0.3033ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3583ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0772ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000012", "name"=>"MyString", "price"=>1}] flags=[] (0.1373ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"55770a6e9c5df73513000012", "product"=>{"name"=>"MyString", "price"=>"1"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000013", "name"=>"MyString", "price"=>1}] flags=[] (0.1104ms)
+Redirected to http://test.host/products/55770a6e9c5df73513000013
+Completed 302 Found in 2ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6316ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0710ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000014", "name"=>"MyString", "price"=>1}] flags=[] (0.1521ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"55770a6e9c5df73513000014", "product"=>{"name"=>"MyString", "price"=>"1"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000015", "name"=>"MyString", "price"=>1}] flags=[] (0.1194ms)
+Redirected to http://test.host/products/55770a6e9c5df73513000015
+Completed 302 Found in 2ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5205ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0682ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000016", "name"=>"MyString", "price"=>1}] flags=[] (0.1402ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"55770a6e9c5df73513000016", "product"=>{"name"=>"MyString", "price"=>"1"}}
+Redirected to http://test.host/products
+Completed 302 Found in 2ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5178ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0801ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a6e9c5df73513000017", "name"=>"MyString", "price"=>1}] flags=[] (0.2010ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"55770a6e9c5df73513000017", "product"=>{"name"=>"MyString", "price"=>"1"}}
+Redirected to http://test.host/products
+Completed 302 Found in 2ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3955ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0722ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.7184ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000001", "name"=>"MyString", "price"=>1}] flags=[] (0.1366ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"55770a779c5df7c3ae000001"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a779c5df7c3ae000001"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5126ms)
+Redirected to http://test.host/products/55770a779c5df7c3ae000001
+Completed 302 Found in 68ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4644ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0796ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000002", "name"=>"MyString", "price"=>1}] flags=[] (0.1907ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"55770a779c5df7c3ae000002"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a779c5df7c3ae000002"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3488ms)
+Redirected to http://test.host/products/55770a779c5df7c3ae000002
+Completed 302 Found in 3ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4032ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0780ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000003", "name"=>"MyString", "price"=>1}] flags=[] (0.1497ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"55770a779c5df7c3ae000003"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a779c5df7c3ae000003"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3963ms)
+Redirected to http://test.host/products/55770a779c5df7c3ae000003
+Completed 302 Found in 3ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5257ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0799ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000004", "name"=>"MyString", "price"=>1}] flags=[] (0.1357ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"55770a779c5df7c3ae000004"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a779c5df7c3ae000004"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3157ms)
+Redirected to http://test.host/products/55770a779c5df7c3ae000004
+Completed 302 Found in 3ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4785ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0865ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000005", "name"=>"MyString", "price"=>1}] flags=[] (0.1359ms)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"name"=>"MyString", "price"=>"1"}, "id"=>"55770a779c5df7c3ae000005"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a779c5df7c3ae000005"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3572ms)
+Redirected to http://test.host/products/55770a779c5df7c3ae000005
+Completed 302 Found in 3ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6227ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0989ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000006", "name"=>"MyString", "price"=>1}] flags=[] (0.1433ms)
+Processing by ProductsController#new as HTML
+Completed 200 OK in 7ms (Views: 6.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5064ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0827ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000007", "name"=>"MyString", "price"=>1}] flags=[] (0.1428ms)
+Processing by ProductsController#new as HTML
+Completed 200 OK in 1ms (Views: 1.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5276ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0870ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000008", "name"=>"MyString", "price"=>1}] flags=[] (0.1376ms)
+Processing by ProductsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5076ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0782ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000009", "name"=>"MyString", "price"=>1}] flags=[] (0.1884ms)
+Processing by ProductsController#index as HTML
+Completed 200 OK in 1ms (Views: 1.1ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3948ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0827ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae00000a", "name"=>"MyString", "price"=>1}] flags=[] (0.1411ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"55770a779c5df7c3ae00000a", "product"=>{"name"=>"MyString", "price"=>"1"}}
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3908ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0830ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae00000b", "name"=>"MyString", "price"=>1}] flags=[] (0.1342ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"55770a779c5df7c3ae00000b", "product"=>{"name"=>"MyString", "price"=>"1"}}
+Redirected to http://test.host/products
+Completed 302 Found in 2ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3831ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0861ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae00000c", "name"=>"MyString", "price"=>1}] flags=[] (0.1483ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rails3_mongoid_devise_test command={:count=>"products", :query=>{}} (0.3767ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"55770a779c5df7c3ae00000c", "product"=>{"name"=>"MyString", "price"=>"1"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae00000d", "name"=>"MyString", "price"=>1}] flags=[] (0.1385ms)
+Redirected to http://test.host/products/55770a779c5df7c3ae00000d
+Completed 302 Found in 2ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=rails3_mongoid_devise_test command={:count=>"products", :query=>{}} (0.2620ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3426ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0823ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae00000e", "name"=>"MyString", "price"=>1}] flags=[] (0.1400ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"55770a779c5df7c3ae00000e", "product"=>{"name"=>"MyString", "price"=>"1"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae00000f", "name"=>"MyString", "price"=>1}] flags=[] (0.1659ms)
+Redirected to http://test.host/products/55770a779c5df7c3ae00000f
+Completed 302 Found in 3ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4737ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0787ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000010", "name"=>"MyString", "price"=>1}] flags=[] (0.1366ms)
+Processing by ProductsController#create as HTML
+  Parameters: {"id"=>"55770a779c5df7c3ae000010", "product"=>{"name"=>"MyString", "price"=>"1"}}
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000011", "name"=>"MyString", "price"=>1}] flags=[] (0.1192ms)
+Redirected to http://test.host/products/55770a779c5df7c3ae000011
+Completed 302 Found in 2ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5424ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0954ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000012", "name"=>"MyString", "price"=>1}] flags=[] (0.2406ms)
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"55770a779c5df7c3ae000012"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a779c5df7c3ae000012"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4075ms)
+Completed 200 OK in 3ms (Views: 1.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4795ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0696ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000013", "name"=>"MyString", "price"=>1}] flags=[] (0.1395ms)
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"55770a779c5df7c3ae000013"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a779c5df7c3ae000013"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4070ms)
+Completed 200 OK in 2ms (Views: 1.0ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5884ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0722ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000014", "name"=>"MyString", "price"=>1}] flags=[] (0.1371ms)
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"55770a779c5df7c3ae000014"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a779c5df7c3ae000014"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4156ms)
+Completed 200 OK in 3ms (Views: 1.4ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5882ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0708ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000015", "name"=>"MyString", "price"=>1}] flags=[] (0.1366ms)
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"55770a779c5df7c3ae000015"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a779c5df7c3ae000015"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3929ms)
+Completed 200 OK in 3ms (Views: 1.5ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6664ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0949ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000016", "name"=>"MyString", "price"=>1}] flags=[] (0.4153ms)
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"55770a779c5df7c3ae000016"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a779c5df7c3ae000016"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6893ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a779c5df7c3ae000016"} flags=[:remove_first] (0.1152ms)
+Redirected to http://test.host/products
+Completed 302 Found in 6ms
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5140ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0768ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770a779c5df7c3ae000017", "name"=>"MyString", "price"=>1}] flags=[] (0.1352ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=rails3_mongoid_devise_test command={:count=>"products", :query=>{}} (0.3033ms)
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"55770a779c5df7c3ae000017"}
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a779c5df7c3ae000017"} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3061ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={"_id"=>"55770a779c5df7c3ae000017"} flags=[:remove_first] (0.0908ms)
+Redirected to http://test.host/products
+Completed 302 Found in 3ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=rails3_mongoid_devise_test command={:count=>"products", :query=>{}} (0.3021ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4702ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.1769ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.6082ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0975ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5178ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0944ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4559ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0873ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (4.8060ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0856ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4938ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0854ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4818ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0844ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4811ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.1204ms)
+Started GET "/products" for 127.0.0.1 at 2015-06-09 12:47:03 -0300
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4454ms)
+Completed 200 OK in 4ms (Views: 3.7ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5732ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.1168ms)
+Started GET "/products" for 127.0.0.1 at 2015-06-09 12:48:13 -0300
+Processing by ProductsController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=products selector={} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4346ms)
+Completed 200 OK in 6ms (Views: 5.3ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.8347ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.2434ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770b079c5df7c3ae000018", "name"=>"MyString", "price"=>1}] flags=[] (0.4339ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.8063ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.1616ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770b079c5df7c3ae000019", "name"=>"MyString", "price"=>1}] flags=[] (0.4380ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.7062ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.1504ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770b079c5df7c3ae00001a", "name"=>"MyString", "price"=>1}] flags=[] (0.2716ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5960ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.1304ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770b079c5df7c3ae00001b", "name"=>"MyString", "price"=>1}] flags=[] (0.3209ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.5949ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.1516ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770b079c5df7c3ae00001c", "name"=>"MyString", "price"=>1}] flags=[] (0.1953ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4880ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.1004ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770b079c5df7c3ae00001d", "name"=>"MyString", "price"=>1}] flags=[] (0.1709ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4635ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0963ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770b079c5df7c3ae00001e", "name"=>"MyString", "price"=>1}] flags=[] (0.1729ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4733ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0911ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770b079c5df7c3ae00001f", "name"=>"MyString", "price"=>1}] flags=[] (0.1612ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4966ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0906ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770b079c5df7c3ae000020", "name"=>"MyString", "price"=>1}] flags=[] (0.1602ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3910ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0825ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770b079c5df7c3ae000021", "name"=>"MyString", "price"=>1}] flags=[] (0.1490ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.4003ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0789ms)
+  MOPED: 127.0.0.1:27017 INSERT       database=rails3_mongoid_devise_test collection=products documents=[{"_id"=>"55770b079c5df7c3ae000022", "name"=>"MyString", "price"=>1}] flags=[] (0.1423ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=rails3_mongoid_devise_test collection=system.namespaces selector={:name=>{"$not"=>/system|\$/}} flags=[] limit=0 skip=0 batch_size=nil fields=nil (0.3710ms)
+  MOPED: 127.0.0.1:27017 DELETE       database=rails3_mongoid_devise_test collection=products selector={} flags=[] (0.0749ms)

@@ -1,14 +1,14 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/vinicius/projects/testtodorest/config/environment.rb": [
+      "/home/viniciusteles/projects/testtodorest/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/home/vinicius/projects/testtodorest/config/application.rb": [
+      "/home/viniciusteles/projects/testtodorest/config/application.rb": [
         1,
         null,
         null,
@@ -80,7 +80,7 @@
         null,
         null
       ],
-      "/home/vinicius/projects/testtodorest/config/boot.rb": [
+      "/home/viniciusteles/projects/testtodorest/config/boot.rb": [
         1,
         null,
         null,
@@ -88,7 +88,7 @@
         null,
         1
       ],
-      "/home/vinicius/projects/testtodorest/config/environments/test.rb": [
+      "/home/viniciusteles/projects/testtodorest/config/environments/test.rb": [
         1,
         null,
         null,
@@ -125,7 +125,7 @@
         1,
         null
       ],
-      "/home/vinicius/projects/testtodorest/config/initializers/backtrace_silencers.rb": [
+      "/home/viniciusteles/projects/testtodorest/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -134,7 +134,7 @@
         null,
         null
       ],
-      "/home/vinicius/projects/testtodorest/config/initializers/devise.rb": [
+      "/home/viniciusteles/projects/testtodorest/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -361,27 +361,6 @@
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/vinicius/projects/testtodorest/config/initializers/generators.rb": [
-        1,
-        null
-      ],
-      "/home/vinicius/projects/testtodorest/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -398,14 +377,35 @@
         null,
         null
       ],
-      "/home/vinicius/projects/testtodorest/config/initializers/mime_types.rb": [
+      "/home/viniciusteles/projects/testtodorest/config/initializers/generators.rb": [
+        1,
+        null
+      ],
+      "/home/viniciusteles/projects/testtodorest/config/initializers/inflections.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
         null,
         null
       ],
-      "/home/vinicius/projects/testtodorest/config/initializers/secret_token.rb": [
+      "/home/viniciusteles/projects/testtodorest/config/initializers/mime_types.rb": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/viniciusteles/projects/testtodorest/config/initializers/secret_token.rb": [
         null,
         null,
         null,
@@ -414,7 +414,7 @@
         null,
         1
       ],
-      "/home/vinicius/projects/testtodorest/config/initializers/session_store.rb": [
+      "/home/viniciusteles/projects/testtodorest/config/initializers/session_store.rb": [
         null,
         null,
         1,
@@ -424,7 +424,7 @@
         null,
         null
       ],
-      "/home/vinicius/projects/testtodorest/config/initializers/wrap_parameters.rb": [
+      "/home/viniciusteles/projects/testtodorest/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -436,124 +436,13 @@
         null,
         null
       ],
-      "/home/vinicius/projects/testtodorest/config/routes.rb": [
-        1,
-        null,
-        null,
+      "/home/viniciusteles/projects/testtodorest/config/routes.rb": [
         1,
         1,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null
       ],
-      "/home/vinicius/projects/testtodorest/app/models/user.rb": [
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/vinicius/projects/testtodorest/app/controllers/application_controller.rb": [
-        1,
+      "/home/viniciusteles/projects/testtodorest/app/controllers/application_controller.rb": [
         1,
         1,
         1,
@@ -562,21 +451,20 @@
         1,
         7,
         null,
-        null,
         null
       ],
-      "/home/vinicius/projects/testtodorest/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/vinicius/projects/testtodorest/app/helpers/todolists_helper.rb": [
+      "/home/viniciusteles/projects/testtodorest/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/vinicius/projects/testtodorest/app/controllers/todolists_controller.rb": [
+      "/home/viniciusteles/projects/testtodorest/app/helpers/todolists_helper.rb": [
+        1,
+        null
+      ],
+      "/home/viniciusteles/projects/testtodorest/app/controllers/products_controller.rb": [
         1,
         1,
-        2,
+        4,
         null,
         null,
         1,
@@ -613,24 +501,19 @@
         1,
         11,
         null,
-        null,
         null
       ],
-      "/home/vinicius/projects/testtodorest/app/models/todolist.rb": [
+      "/home/viniciusteles/projects/testtodorest/app/models/product.rb": [
         1,
         1,
         null,
         1,
         1,
         null,
-        null,
         1,
-        null,
-        1,
-        null,
         null
       ]
     },
-    "timestamp": 1363670309
+    "timestamp": 1433864967
   }
 }
