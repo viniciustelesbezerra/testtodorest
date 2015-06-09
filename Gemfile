@@ -9,6 +9,7 @@ gem 'mongoid', '>= 3.0.19'
 gem 'rspec-rails', '>= 2.12.2', group: [:development, :test]
 gem 'factory_girl_rails', '>= 4.2.0', group: [:development, :test]
 gem 'figaro', '>= 0.5.3'
+gem "devise", ">= 2.2.3"
 
 group :assets do
   gem 'sass-rails', '~> 3.2.3'
